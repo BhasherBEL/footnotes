@@ -1,0 +1,69 @@
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-muted: #f9fafb;
+  --border: #e5e7eb;
+  --divider: #f0f1f3;
+  --grid: #eef0f3;
+  --axis: #9ca3af;
+
+  --text: #111827;
+  --text-2: #374151;
+  --muted: #4b5563;
+
+  --accent: #2457d6;
+  --accent-strong: #1f4fb8;
+  --accent-soft: #eef3fd;
+  --bar: #c7d2e3;
+  --point: #afc1e4;
+  --positive: #047857;
+  --selected: #111827;
+
+  --zone-1: #7eb3dd;
+  --zone-2: #3fa796;
+  --zone-3: #e8b23a;
+  --zone-4: #e8773d;
+  --zone-5: #d44848;
+
+  --heat-0: #eef0f3;
+  --heat-1: #c7d7f5;
+  --heat-2: #8fb0ee;
+  --heat-3: #4f7fe0;
+  --heat-4: #2457d6;
+
+  --radius-card: 14px;
+  --radius-control: 10px;
+  --radius-inner: 7px;
+  --radius-pill: 999px;
+
+  --font-body: 'Inter Variable', Inter, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', Inter, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: inherit;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
