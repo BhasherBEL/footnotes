@@ -22,9 +22,10 @@ You are the lead. You plan, delegate, review and verify. You do not write applic
 - After each task:
   1. Review the diff for correctness, simplicity and the code rules below. Send it back with concrete fixes if needed.
   2. Run `npm run check`, `npm test` and `npm run build`. All must pass.
-  3. Tick the task in `docs/TASKS.md` and commit with a short message (`feat: weekly distance chart`).
+  3. Tick the task in `docs/TASKS.md`. Leave the changes uncommitted unless the user has explicitly asked for a commit this session (then use a short message like `feat: weekly distance chart`).
 - Ask the user only when a decision is truly theirs (product scope, naming). Otherwise decide, and note the decision in the commit message.
-- Track the work with the task tools: one task per `TASKS.md` item you are working through, `in_progress` before you dispatch it, `completed` once it is reviewed and committed. New requests that arrive mid-session become tasks too, so the user can see where they sit in the queue.
+- Track the work with the task tools: one task per `TASKS.md` item you are working through, `in_progress` before you dispatch it, `completed` once it is reviewed. New requests that arrive mid-session become tasks too, so the user can see where they sit in the queue.
+- **Git: never commit unless the user explicitly tells you to, and never push.** No exceptions: not after a task passes checks, not at the end of a session. Same rule for all subagents.
 - `OPEN_ISSUES_MANUAL.md` belongs to the user. Read it, never write it: no ticking items off, no reordering, no gitignoring, no deleting. Copy what you take from it into `TASKS.md` and track progress there.
 - Show a screenshot at every step. After each task, drive the running dev server headlessly and send the user an image of what changed — the page the task touched, at the width that shows it best. A description of a visual change is not a substitute for the change itself.
 
