@@ -424,3 +424,21 @@ screenshots of the dashboard, a run page and Trends; the map already zooms to th
 run-start bounding box and shades countries on a log scale; pace at a fixed heart rate
 draws points now, measured on the user's files where the offered references cover
 13 to 17 of 41 runs.
+
+## 17. PWA installability (added by the user, 2026-11-22)
+
+- [x] **Web manifest and icons.** `public/manifest.webmanifest` linked from
+      `index.html`: standalone display, relative `start_url` and `scope` so the app
+      binds to the `/Footnotes/` GitHub Pages subpath, splash and theme colors from
+      the tokens in `app.css`. PNG icons 192 and 512 plus a maskable 512 and a 180
+      apple-touch-icon, rasterized from the lightning-bolt `favicon.svg`. Meta tags:
+      theme-color, description, apple-mobile-web-app.
+- [x] **Service worker.** Emitted at build time by a small Vite plugin, no new
+      dependencies: precache the hashed bundle (FIT worker chunk and fonts included)
+      plus the public files; cache-first for precached assets, network-first with
+      cache fallback for navigations and other same-origin GETs; cross-origin
+      requests (OSM tiles) untouched. Registered in production only, after load.
+
+**Done when** the build emits a valid manifest and `sw.js`, `npm run check`,
+`npm test` and `npm run build` pass, and a headless browser paints the dashboard
+from cache with the server stopped.

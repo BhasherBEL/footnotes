@@ -11,3 +11,9 @@ const app = mount(App, {
 })
 
 export default app
+
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
+  addEventListener('load', () => {
+    navigator.serviceWorker.register(new URL('sw.js', document.baseURI).href)
+  })
+}
